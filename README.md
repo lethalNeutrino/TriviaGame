@@ -1,2 +1,2 @@
 # TriviaGame
-Hey nick, lets have a refactoring contest in separate branches
+Hey nick, lets have a refactoring contest
