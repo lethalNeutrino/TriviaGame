@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements theLifeInterface 
         }
 
         //Change question header
-        incrementQuestionNum();
+        adjustQuestionNum(screen);
     } //Right arrow button
     public void lastQ(View view) {
         //Find next and back buttons
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements theLifeInterface 
         }
 
         //Change question header
-        decrementQuestionNum();
+        adjustQuestionNum(screen);
     } //Left arrow button
     public void submit(View view) {
 
@@ -261,25 +261,9 @@ public class MainActivity extends AppCompatActivity implements theLifeInterface 
     }
 
     //Change banner with question number at top
-    public void incrementQuestionNum(){
+    public void adjustQuestionNum(int reference){
         TextView fiveHeadedDragon = (TextView)findViewById(R.id.q_number);
-        switch(screen){
-            case 0: fiveHeadedDragon.setText(questionNum[0]); break;
-            case 1: fiveHeadedDragon.setText(questionNum[1]); break;
-            case 2: fiveHeadedDragon.setText(questionNum[2]); break;
-            case 3: fiveHeadedDragon.setText(questionNum[3]); break;
-            case 4: fiveHeadedDragon.setText(questionNum[4]); break;
-        }
-    }
-    public void decrementQuestionNum(){
-        TextView fiveHeadedDragon = (TextView)findViewById(R.id.q_number);
-        switch(screen){
-            case 0: fiveHeadedDragon.setText(questionNum[0]); break;
-            case 1: fiveHeadedDragon.setText(questionNum[1]); break;
-            case 2: fiveHeadedDragon.setText(questionNum[2]); break;
-            case 3: fiveHeadedDragon.setText(questionNum[3]); break;
-            case 4: fiveHeadedDragon.setText(questionNum[4]); break;
-        }
+        fiveHeadedDragon.setText(questionNum[reference]);
     }
 
     //Question setter
