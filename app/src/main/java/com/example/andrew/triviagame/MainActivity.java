@@ -54,18 +54,7 @@ public class MainActivity extends AppCompatActivity implements theLifeInterface 
         banishRepeats();
 
         //Show first question
-        switch (fiveQ[0]) {
-            case 0: questionSetOne(); break;
-            case 1: questionSetTwo(); break;
-            case 2: questionSetThree(); break;
-            case 3: questionSetFour(); break;
-            case 4: questionSetFive(); break;
-            case 5: questionSetSix(); break;
-            case 6: questionSetSeven(); break;
-            case 7: questionSetEight(); break;
-            case 8: questionSetNine(); break;
-            case 9: questionSetTen(); break;
-        }
+        questionSet(fiveQ[0]);
 
         //Reset variables if played again
         for (int i = 0; i < chosen.length; i++){
@@ -111,18 +100,7 @@ public class MainActivity extends AppCompatActivity implements theLifeInterface 
         }
 
         //Set next question
-        switch(fiveQ[screen]) {
-            case 0: questionSetOne(); break;
-            case 1: questionSetTwo(); break;
-            case 2: questionSetThree(); break;
-            case 3: questionSetFour(); break;
-            case 4: questionSetFive(); break;
-            case 5: questionSetSix(); break;
-            case 6: questionSetSeven(); break;
-            case 7: questionSetEight(); break;
-            case 8: questionSetNine(); break;
-            case 9: questionSetTen(); break;
-        }
+        questionSet(fiveQ[screen]);
 
         //Display saved answer, if there is one
         switch (chosen[screen]){
@@ -173,18 +151,7 @@ public class MainActivity extends AppCompatActivity implements theLifeInterface 
         }
 
         //Set question
-        switch(fiveQ[screen]) {
-            case 0: questionSetOne(); break;
-            case 1: questionSetTwo(); break;
-            case 2: questionSetThree(); break;
-            case 3: questionSetFour(); break;
-            case 4: questionSetFive(); break;
-            case 5: questionSetSix(); break;
-            case 6: questionSetSeven(); break;
-            case 7: questionSetEight(); break;
-            case 8: questionSetNine(); break;
-            case 9: questionSetTen(); break;
-        }
+        questionSet(fiveQ[screen]);
 
         //Choose saved answer
         switch (chosen[screen]){
@@ -315,137 +282,18 @@ public class MainActivity extends AppCompatActivity implements theLifeInterface 
         }
     }
 
-    //Question setters
-    public void questionSetOne(){
+    //Question setter
+    public void questionSet(int reference){
         TextView prompt = (TextView) findViewById(R.id.question);
         RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
         RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
         RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
         RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
 
-        prompt.setText(blueEyesWhiteDragon[0]);
-        ans_1.setText(answer1[0]);
-        ans_2.setText(answer2[0]);
-        ans_3.setText(answer3[0]);
-        ans_4.setText(answer4[0]);
-
-
-    }
-    public void questionSetTwo(){
-        TextView prompt = (TextView) findViewById(R.id.question);
-        RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
-        RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
-        RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
-        RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
-
-        prompt.setText(blueEyesWhiteDragon[1]);
-        ans_1.setText(answer1[1]);
-        ans_2.setText(answer2[1]);
-        ans_3.setText(answer3[1]);
-        ans_4.setText(answer4[1]);
-    }
-    public void questionSetThree(){
-        TextView prompt = (TextView) findViewById(R.id.question);
-        RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
-        RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
-        RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
-        RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
-
-        prompt.setText(blueEyesWhiteDragon[2]);
-        ans_1.setText(answer1[2]);
-        ans_2.setText(answer2[2]);
-        ans_3.setText(answer3[2]);
-        ans_4.setText(answer4[2]);
-    }
-    public void questionSetFour(){
-        TextView prompt = (TextView) findViewById(R.id.question);
-        RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
-        RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
-        RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
-        RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
-
-        prompt.setText(blueEyesWhiteDragon[3]);
-        ans_1.setText(answer1[3]);
-        ans_2.setText(answer2[3]);
-        ans_3.setText(answer3[3]);
-        ans_4.setText(answer4[3]);
-    }
-    public void questionSetFive(){
-        TextView prompt = (TextView) findViewById(R.id.question);
-        RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
-        RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
-        RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
-        RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
-
-        prompt.setText(blueEyesWhiteDragon[4]);
-        ans_1.setText(answer1[4]);
-        ans_2.setText(answer2[4]);
-        ans_3.setText(answer3[4]);
-        ans_4.setText(answer4[4]);
-    }
-    public void questionSetSix(){
-        TextView prompt = (TextView) findViewById(R.id.question);
-        RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
-        RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
-        RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
-        RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
-
-        prompt.setText(blueEyesWhiteDragon[5]);
-        ans_1.setText(answer1[5]);
-        ans_2.setText(answer2[5]);
-        ans_3.setText(answer3[5]);
-        ans_4.setText(answer4[5]);
-    }
-    public void questionSetSeven(){
-        TextView prompt = (TextView) findViewById(R.id.question);
-        RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
-        RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
-        RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
-        RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
-
-        prompt.setText(blueEyesWhiteDragon[6]);
-        ans_1.setText(answer1[6]);
-        ans_2.setText(answer2[6]);
-        ans_3.setText(answer3[6]);
-        ans_4.setText(answer4[6]);
-    }
-    public void questionSetEight(){
-        TextView prompt = (TextView) findViewById(R.id.question);
-        RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
-        RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
-        RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
-        RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
-
-        prompt.setText(blueEyesWhiteDragon[7]);
-        ans_1.setText(answer1[7]);
-        ans_2.setText(answer2[7]);
-        ans_3.setText(answer3[7]);
-        ans_4.setText(answer4[7]);
-    }
-    public void questionSetNine(){
-        TextView prompt = (TextView) findViewById(R.id.question);
-        RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
-        RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
-        RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
-        RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
-
-        prompt.setText(blueEyesWhiteDragon[8]);
-        ans_1.setText(answer1[8]);
-        ans_2.setText(answer2[8]);
-        ans_3.setText(answer3[8]);
-        ans_4.setText(answer4[8]);
-    }
-    public void questionSetTen(){
-        TextView prompt = (TextView) findViewById(R.id.question);
-        RadioButton ans_1 = (RadioButton) findViewById(R.id.ans_1);
-        RadioButton ans_2 = (RadioButton) findViewById(R.id.ans_2);
-        RadioButton ans_3 = (RadioButton) findViewById(R.id.ans_3);
-        RadioButton ans_4 = (RadioButton) findViewById(R.id.ans_4);
-
-        prompt.setText(blueEyesWhiteDragon[9]);
-        ans_1.setText(answer1[9]);
-        ans_2.setText(answer2[9]);
-        ans_3.setText(answer3[9]);
-        ans_4.setText(answer4[9]);
+        prompt.setText(blueEyesWhiteDragon[reference]);
+        ans_1.setText(answer1[reference]);
+        ans_2.setText(answer2[reference]);
+        ans_3.setText(answer3[reference]);
+        ans_4.setText(answer4[reference]);
     }
 }
